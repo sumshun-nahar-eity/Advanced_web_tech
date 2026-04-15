@@ -1,0 +1,54 @@
+### GET all courses
+GET http://localhost:3000/course
+
+
+### GET course by ID
+GET http://localhost:3000/course/1
+
+
+### POST course (correct)
+POST http://localhost:3000/course
+Content-Type: application/json
+
+{
+  "name": "Web Tech",
+  "description": "NestJS course"
+}
+
+
+### POST course (wrong - validation test)
+POST http://localhost:3000/course
+Content-Type: application/json
+
+{
+  "description": "No name"
+}
+
+
+### PUT course
+PUT http://localhost:3000/course/1
+Content-Type: application/json
+
+{
+  "name": "Updated Course",
+  "description": "Updated description"
+}
+
+
+### PATCH course
+PATCH http://localhost:3000/course/1
+Content-Type: application/json
+
+{
+  "name": "Partially Updated"
+}
+
+
+### DELETE course
+DELETE http://localhost:3000/course/1
+
+
+### FILE UPLOAD
+POST http://localhost:3000/course/1/upload
+
+file=@test.jpg
